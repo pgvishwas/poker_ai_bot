@@ -1,5 +1,5 @@
 # game/player.py
-from bots.random_bots import RandomBot
+from bots.random_bots import BotPlayer
 
 class Player:
     def __init__(self, name, is_bot=False, strategy=None, bankroll=1000):
@@ -12,7 +12,7 @@ class Player:
         self.folded = False
 
         if self.is_bot and self.strategy == "random":
-            self.bot = RandomBot(name)
+            self.bot = BotPlayer(name)
         else:
             self.bot = None
 
