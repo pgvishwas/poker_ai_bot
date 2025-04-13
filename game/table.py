@@ -38,12 +38,11 @@ class Table:
             print(f"{player.name}: {status}, Bankroll: ${player.bankroll}")
         print("-------------------\n")
 
-    def collect_bets(self, min_bet=10):
+    def collect_bets(self, min_bet):
         for player in self.players:
             if player.folded:
                 continue  # Skip folded players
-
-            action, amount = player.make_decision(self, min_bet)
+            action, amount = player.make_decision(self.community_cards,min_bet)
 
             if action == "fold":
                 player.fold()

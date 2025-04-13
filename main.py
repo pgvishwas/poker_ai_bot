@@ -75,4 +75,4 @@ def play_hand(num_players=6):  # You can change num_players to simulate more pla
 
 
 if __name__ == "__main__":
-    play_hand(num_players=8)  # Test with 6 players (can change this number)
+    play_hand(num_players=6)  # Test with 6 players (can change this number)

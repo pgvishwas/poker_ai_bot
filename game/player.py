@@ -1,6 +1,7 @@
 # game/player.py
 from bots.random_bots import BotPlayer
 
+
 class Player:
     def __init__(self, name, is_bot=False, strategy=None, bankroll=1000):
         self.name = name
@@ -16,9 +17,9 @@ class Player:
         else:
             self.bot = None
 
-    def make_decision(self, table, min_bet):
+    def make_decision(self, community_cards,min_bet):
         if self.bot:
-            action, amount = self.bot.decide(self, table, min_bet)
+            action, amount = self.bot.decide(self.hand,community_cards,min_bet)
             return action, amount
         else:
             # placeholder for human input later

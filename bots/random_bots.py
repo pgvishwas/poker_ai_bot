@@ -9,5 +9,5 @@ class BotPlayer:
     def __init__(self, name):
         self.name = name
 
-    def decide(self, community_cards):
-        return decide_action(self.hand, community_cards)
+    def decide(self,hand,community_cards,min_bet):
+        return decide_action(hand, community_cards,min_bet)
